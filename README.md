@@ -10,9 +10,9 @@ API Information
  
 # Request –
 
-api.openweathermap.org/data/2.5/weather?q={city name}&appid=42a1771a0b787bf12e734ada0cfc80cb 
+ https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=42a1771a0b787bf12e734ada0cfc80cb 
 
-Eg - http://api.openweathermap.org/data/2.5/weather?q=London&appid=42a1771a0b787bf12e734ada0cfc80cb 
+Eg - https://api.openweathermap.org/data/2.5/weather?q=London&appid=42a1771a0b787bf12e734ada0cfc80cb 
 
 
 # Response –
