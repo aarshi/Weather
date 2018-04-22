@@ -6,12 +6,12 @@ User can see a list of cities and on selecting a city, weather information for t
 
 API Information –
  
-Request –
+#Request –
 api.openweathermap.org/data/2.5/weather?q={city name}
 Eg - api.openweathermap.org/data/2.5/weather?q=London
 
 
-Response –
+#Response –
 {  
    "coord":{  
       "lon":-0.13,
