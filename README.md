@@ -8,6 +8,7 @@ API Information
  
 # Request –
 api.openweathermap.org/data/2.5/weather?q={city name}
+
 Eg - api.openweathermap.org/data/2.5/weather?q=London
 
 
