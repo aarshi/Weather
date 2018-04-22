@@ -1,5 +1,4 @@
 # Weather iOS App
-iOS Weather app
 
 User can see a list of cities and on selecting a city, weather information for that city should be displayed. 
 
