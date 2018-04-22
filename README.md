@@ -13,43 +13,45 @@ Eg - http://api.openweathermap.org/data/2.5/weather?q=London&appid=42a1771a0b787
 
 
 # Response –
-{
-	"coord": {
-		"lon": -0.13,
-		"lat": 51.51
-	},
-	"weather": [{
-		"id": 300,
-		"main": "Drizzle",
-		"description": "light intensity drizzle",
-		"icon": "09d"
-	}],
-	"base": "stations",
-	"main": {
-		"temp": 280.32,
-		"pressure": 1012,
-		"humidity": 81,
-		"temp_min": 279.15,
-		"temp_max": 281.15
-	},
-	"visibility": 10000,
-	"wind": {
-		"speed": 4.1,
-		"deg": 80
-	},
-	"clouds": {
-		"all": 90
-	},
-	"dt": 1485789600,
-	"sys": {
-		"type": 1,
-		"id": 5091,
-		"message": 0.0103,
-		"country": "GB",
-		"sunrise": 1485762037,
-		"sunset": 1485794875
-	},
-	"id": 2643743,
-	"name": "London",
-	"cod": 200
+{  
+   "coord":{  
+      "lon":-0.13,
+      "lat":51.51
+   },
+   "weather":[  
+      {  
+         "id":701,
+         "main":"Mist",
+         "description":"mist",
+         "icon":"50n"
+      }
+   ],
+   "base":"stations",
+   "main":{  
+      "temp":286.9,
+      "pressure":1013,
+      "humidity":100,
+      "temp_min":286.15,
+      "temp_max":287.15
+   },
+   "visibility":10000,
+   "wind":{  
+      "speed":2.6,
+      "deg":50
+   },
+   "clouds":{  
+      "all":48
+   },
+   "dt":1524358200,
+   "sys":{  
+      "type":1,
+      "id":5093,
+      "message":0.0061,
+      "country":"GB",
+      "sunrise":1524372618,
+      "sunset":1524424131
+   },
+   "id":2643743,
+   "name":"London",
+   "cod":200
 }
