@@ -7,9 +7,9 @@ User can see a list of cities and on selecting a city, weather information for t
 API Information
  
 # Request –
-api.openweathermap.org/data/2.5/weather?q={city name}
+api.openweathermap.org/data/2.5/weather?q={city name}&appid=42a1771a0b787bf12e734ada0cfc80cb 
 
-Eg - api.openweathermap.org/data/2.5/weather?q=London
+Eg - http://api.openweathermap.org/data/2.5/weather?q=London&appid=42a1771a0b787bf12e734ada0cfc80cb 
 
 
 # Response –
