@@ -3,6 +3,15 @@
 User can see a list of cities and on selecting a city, weather information for that city should be displayed. 
 
 
+PHASE 1
+A. Look at designs.png and make screen 1
+B. All values is hardcoded
+
+PHASE 2
+A. Use APIs to get data and display on screen 1
+B. Implement screen 2 using API
+C. Implement pull to refresh on screen 2
+
 API Information
  
 # 1. CURRENT WEATHER
