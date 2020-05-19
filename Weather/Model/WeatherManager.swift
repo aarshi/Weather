@@ -8,9 +8,16 @@
 
 import Foundation
 
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(weather: WeatherData)
+    func didUpdateError(error: Error)
+}
+
 struct WeatherManager {
     //This is same as copied from web browser
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=a0e3b2ad195d7be1180fae6161106a64&units=imperial"
+    
+    var delegate: WeatherManagerDelegate?
     
     //To append dynamic stuff in the url
     func fetchWeather(cityName: String) {
@@ -28,7 +35,7 @@ struct WeatherManager {
             //3. Give URLSession a task : Putting URL in browser bar and task is to fetch data
             let task = urlSession.dataTask(with: url) { (data, urlResponse, error) in
                 if error != nil {
-                    print(error!)
+                    self.delegate?.didUpdateError(error: error!)
                     return
                 }
                 
@@ -36,7 +43,9 @@ struct WeatherManager {
                     //Now here data is coming as JSON but we do not want to get java objects out of it rather we want swift objects
                     //let dataString = String(data: safeData, encoding: .utf8)
                     //print(dataString!)
-                    self.parseJSON(weatherDataInfo: safeData)
+                    if let data = self.parseJSON(weatherDataInfo: safeData) {
+                        self.delegate?.didUpdateWeather(weather: data)
+                    }
                 }
             }
             
@@ -45,7 +54,7 @@ struct WeatherManager {
         }
     }
     
-    func parseJSON(weatherDataInfo: Data) {
+    func parseJSON(weatherDataInfo: Data) -> WeatherData? {
         let decoder = JSONDecoder()
         //This method expects a data type rather than an object, so we need to put ".self" to reference the type object wich turns cityName into data type that I am passing in
         do {
@@ -53,8 +62,10 @@ struct WeatherManager {
             print(decodedData.name)
             print(decodedData.main.temp)
             print(decodedData.weather[0].description)
+            return decodedData
         } catch {
-            print(error)
+            delegate?.didUpdateError(error: error)
+            return nil
         }
         
         //If you see this method, it is marked with:
